@@ -1,5 +1,5 @@
 ---
-title: "spark"
+title: "Spark"
 layout: "layouts/home.html"
 intro:
   main: "Bread & Butter"
@@ -9,5 +9,5 @@ We got you covered from €99"
   buttonText: "preorder"
   buttonUrl: "/preorder"
   image: "/images/bg/bike.jpg"
-  imageAlt: "Buttered toasted white bread"
+  imageAlt: "Electric Motorcycle"
 ---
