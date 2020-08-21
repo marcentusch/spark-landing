@@ -13,6 +13,9 @@ module.exports = (config) => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
 
+  // Passtrhoughs
+  config.addPassthroughCopy({ "src/fonts/": "fonts/" });
+
   return {
     // Setting the template engine to nunjucks. Now .html files can use nunjucks
     markdownTemplateEngine: "njk",

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Roag Light";
+  src: url("fonts/Roag-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Roag Bold";
+  font-weight: bold;
+  src: url("fonts/Roag-Bold.otf") format("opentype");
+}
+
+p {
+  font-family: "Roag Light";
+}

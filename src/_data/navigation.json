@@ -1,0 +1,24 @@
+{
+  "items": [
+    {
+      "text": "Home",
+      "url": "/"
+    },
+    {
+      "text": "Help",
+      "url": "/help/"
+    },
+    {
+      "text": "FAQ",
+      "url": "/faq/"
+    },
+    {
+      "text": "About",
+      "url": "/about/"
+    },
+    {
+      "text": "Preorder",
+      "url": "/preorder/"
+    }
+  ]
+}

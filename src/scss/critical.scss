@@ -1,6 +1,8 @@
 // First up: config and functions
 @import "config";
+@import "utilities/media-queries";
 
+@import "typography";
 @import "reset";
 
 // Global styles start
@@ -28,6 +30,8 @@ body {
 }
 
 // Import blocks
+@import "blocks/site-head";
+@import "blocks/nav";
 
 // Import utilities
 @import "utilities/site-wrap";

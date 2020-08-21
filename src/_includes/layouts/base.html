@@ -21,11 +21,6 @@
       {% endfor %}
     {% endif %}
 
-    {# Performance hack! set media to print so browser loads these last so more important content loads first and is not blocked
-      
-     #}
-    <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'"/>
-
     {# Add facility for pages to declare an array of stylesheet paths #}
     {% if pageStylesheets %}
       {% for item in pageStylesheets %}

@@ -1,0 +1,11 @@
+@mixin media-query-md {
+  @media screen and (min-width: 37rem) {
+    @content;
+  }
+}
+
+@mixin media-query-lg {
+  @media screen and (min-width: 62rem) {
+    @content;
+  }
+}
