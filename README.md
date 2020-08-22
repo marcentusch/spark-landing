@@ -27,6 +27,8 @@ I use Gulp for task runner since it is simple to setup minifications and webpack
 
 I use GSAP for animations for improved browser support, perfomance and ease of development.
 
+Ended up aligning the main bike image along the normal content instead of letting it flow to the end of the screen. In larger screen sizes it does not look so nice sitting all the way at the right side since it will be further away from rest of the content
+
 ### Ideas
 
 Logo onLoad animation with a bike that reveals the logo with lightning particle effects coming out of the exhaust

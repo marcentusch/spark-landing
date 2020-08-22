@@ -9,6 +9,21 @@
   src: url("fonts/Roag-Bold.otf") format("opentype");
 }
 
-p {
+@font-face {
+  font-family: "Roag Extra Bold Italic";
+  font-weight: 900;
+  src: url("fonts/Roag-ExtraBoldItalic.otf") format("opentype");
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Roag Extra Bold Italic";
+  font-size: 4rem;
+}
+
+p,
+a {
   font-family: "Roag Light";
 }

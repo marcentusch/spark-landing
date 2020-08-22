@@ -3,18 +3,19 @@
 
 {% block content %}
   <div class="wrapper">
-    <section class="auto-grid intro">
+    <section class="intro">
       <article class="header">
         <h1>
           {{intro.main}}
         </h1>
+        <div class="header__sub">
+          <p>{{intro.summary1}}</p>
+          <p>{{intro.summary2}}
+            <b>{{intro.price}}</b>
+          </p>
+          <a class="cta" href={{intro.buttonUrl}}>{{intro.buttonText}}</a>
+        </div>
       </article>
-      <div class="subheader">
-        <p>{{intro.summary1}}</p>
-        <p>{{intro.summary2}}
-          <b>{{intro.price}}</b>
-        </p>
-      </div>
       <aside class="hero"></aside>
     </section>
   </div>
