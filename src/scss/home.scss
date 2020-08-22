@@ -32,18 +32,29 @@
     }
 
     & .cta {
-      background: red;
-      color: var(--white);
-      border-radius: 40px;
-      padding: 0.5rem 2rem;
-      font-family: "Roag Bold";
-      font-size: 1.5rem;
-      text-decoration: none;
-      text-transform: uppercase;
+      position: relative;
 
-      @include media-query-md {
-        background: rgba(255, 0, 0, 0.1);
-        color: var(--red);
+      &__button {
+        background: red;
+        color: var(--white);
+        border-radius: 40px;
+        padding: 0.5rem 2rem;
+        font-family: "Roag Bold";
+        font-size: 1.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        @include media-query-md {
+          background: rgba(255, 0, 0, 0.1);
+          color: var(--red);
+        }
+      }
+
+      &__arrow {
+        height: 7rem;
+        position: absolute;
+        top: -5rem;
+        margin-left: 2rem;
       }
     }
 
@@ -64,11 +75,12 @@
 }
 
 .hero {
+  position: relative;
   min-height: 20rem;
   background-image: url("images/bike-hero.jpg");
   background-size: auto;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: top center;
   grid-column: 1/7;
   grid-row: 1;
 
@@ -86,5 +98,37 @@
     width: unset;
     margin-left: unset;
     opacity: 1;
+  }
+}
+
+.companies {
+  margin-top: 5rem;
+
+  &__text {
+    color: var(--grey);
+  }
+}
+
+.bike-doodles {
+  position: absolute;
+  &__heat-left {
+    height: 4rem;
+    top: 18rem;
+    left: 31%;
+  }
+  &__heat-right {
+    height: 4rem;
+    top: 12rem;
+    right: 35%;
+  }
+  &__light {
+    height: 6rem;
+    left: 30%;
+    top: -3rem;
+  }
+
+  display: none;
+  @include media-query-lg {
+    display: block;
   }
 }

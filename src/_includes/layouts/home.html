@@ -13,10 +13,22 @@
           <p>{{intro.summary2}}
             <b>{{intro.price}}</b>
           </p>
-          <a class="cta" href={{intro.buttonUrl}}>{{intro.buttonText}}</a>
+          <div class="cta">
+            <a class="cta__button" href={{intro.buttonUrl}}>{{intro.buttonText}}
+            </a>
+            {% include "partials/svg/arrow.svg" %}
+          </div>
         </div>
       </article>
-      <aside class="hero"></aside>
+      <aside class="hero">
+        {% include "partials/svg/light.svg" %}
+        {% include "partials/svg/heat-left.svg" %}
+        {% include "partials/svg/heat-right.svg" %}
+      </aside>
+    </section>
+    <section class="companies">
+      <p class="companies__text"> As seen in</p>
+      <div class="companies-images"></div>
     </section>
   </div>
 {% endblock %}
