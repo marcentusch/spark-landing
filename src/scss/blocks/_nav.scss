@@ -31,6 +31,10 @@
       }
     }
 
+    &:hover {
+      color: var(--red);
+    }
+
     // Adds the fake border to active state items
     &[data-state="active"],
     &[aria-current="page"] {

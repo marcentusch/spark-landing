@@ -15,6 +15,8 @@ Landing page for fictional company Spark
 - [x] Semantic HTML for accesibility
 - [x] Disable animations for sensitive users
 
+[Lighthouse scores](/lighthouse.png)
+
 ### My thoughts and decisions
 
 I use no SPA frameworks like React or Vue since they make no sense for such a simple site with no state and only a single page.
