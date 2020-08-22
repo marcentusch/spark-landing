@@ -10,6 +10,27 @@ function init() {
   bikeTweens();
   introTweens();
   companiesTweens();
+
+  // Exited arrow animation on CTA hover
+  const ctaButton = document.querySelector(".cta__button");
+  const arrowHead = document.querySelector("#arrow2");
+
+  ctaButton.addEventListener("mouseenter", (e) => {
+    gsap.set(arrowHead, { transformOrigin: "left" });
+    gsap.to(arrowHead, 0.1, {
+      rotate: "-=15",
+      yoyo: true,
+      repeat: 5,
+      ease: Power0.easeNone,
+    });
+    gsap.to(arrowHead, 0.1, {
+      rotate: "+=15",
+      yoyo: true,
+      repeat: 5,
+      ease: Power0.easeNone,
+    });
+    gsap.to(arrowHead, { rotate: "0", delay: 0.5, duration: 0.1 });
+  });
 }
 
 // Wait until page is loaded
@@ -124,7 +145,9 @@ function bikeTweens() {
 }
 
 function companiesTweens() {
-  const companies = document.querySelectorAll(".companies__image");
+  const companies = document.querySelectorAll(
+    ".companies__image, .companies__text"
+  );
 
   companiesTl.fromTo(
     companies,
