@@ -16,9 +16,9 @@ Landing page for fictional company Spark
 - [x] Disable animations for sensitive users
 - [x] Responsive for all screen sizes
 
-![Lighthouse scores](/lighthouse.png)
+#### Lighthouse scores
 
-SEO score is lower because Netlify sites without a domain will block site crawlers.
+![Lighthouse scores](/lighthouse.png)
 
 ### My thoughts and decisions
 
