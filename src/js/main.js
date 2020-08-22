@@ -3,11 +3,13 @@ const mainTl = gsap.timeline();
 const arrowTl = gsap.timeline();
 const bikeDoodlesTl = gsap.timeline();
 const introTl = gsap.timeline();
+const companiesTl = gsap.timeline();
 
 function init() {
   arrowTweens();
   bikeTweens();
   introTweens();
+  companiesTweens();
 }
 
 // Wait until page is loaded
@@ -48,10 +50,15 @@ function arrowTweens() {
 }
 
 function introTweens() {
-  const intro = document.querySelector("#intro");
+  const introElements = [
+    ".intro__main",
+    ".intro__sub1",
+    ".intro__sub2",
+    ".cta",
+  ];
 
   introTl.fromTo(
-    intro,
+    introElements,
     {
       autoAlpha: 0,
       x: "-2rem",
@@ -62,6 +69,7 @@ function introTweens() {
       ease: Power3.easeInOut,
       autoAlpha: 1,
       x: 0,
+      stagger: 0.2,
     }
   );
 }
@@ -112,5 +120,24 @@ function bikeTweens() {
     heatRightIds,
     { drawSVG: "0%", autoAlpha: 1 },
     { duration: 0.8, drawSVG: "100%", stagger: 0.3, delay: -0.8 }
+  );
+}
+
+function companiesTweens() {
+  const companies = document.querySelectorAll(".companies__image");
+
+  companiesTl.fromTo(
+    companies,
+    {
+      autoAlpha: 0,
+      y: 20,
+    },
+    {
+      duration: 0.7,
+      autoAlpha: 1,
+      y: 0,
+      stagger: 0.3,
+      delay: 2,
+    }
   );
 }

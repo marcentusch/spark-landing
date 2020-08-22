@@ -5,12 +5,12 @@
   <div class="wrapper">
     <section class="intro">
       <article id="intro" class="header">
-        <h1>
+        <h1 class="intro__main">
           {{intro.main}}
         </h1>
         <div class="header__sub">
-          <p>{{intro.summary1}}</p>
-          <p>{{intro.summary2}}
+          <p class="intro__sub1">{{intro.summary1}}</p>
+          <p class="intro__sub2">{{intro.summary2}}
             <b>{{intro.price}}</b>
           </p>
           <div class="cta">
@@ -27,8 +27,12 @@
       </aside>
     </section>
     <section class="companies">
-      <p class="companies__text"> As seen in</p>
-      <div class="companies-images"></div>
+      <p class="companies__text">{{companies.text}}</p>
+      <div class="companies__images">
+        {% for img in companies.images %}
+          <img class="companies__image" src={{img}} alt="">
+        {% endfor %}
+      </div>
     </section>
   </div>
 {% endblock %}

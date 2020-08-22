@@ -10,4 +10,13 @@ intro:
   buttonUrl: "/preorder"
   image: "/images/bg/bike.jpg"
   imageAlt: "Electric Motorcycle"
+companies:
+  text: "As seen in"
+  images:
+    [
+      "images/media_bikeexif.png",
+      "images/media_pipeburn.png",
+      "images/Greasy.png",
+      "images/media_chopcult.png",
+    ]
 ---
