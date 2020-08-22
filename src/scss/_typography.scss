@@ -20,7 +20,11 @@ h2,
 h3,
 h4 {
   font-family: "Roag Extra Bold Italic";
-  font-size: 4rem;
+  font-size: 2.5rem;
+
+  @include media-query-lg {
+    font-size: 4rem;
+  }
 }
 
 p,

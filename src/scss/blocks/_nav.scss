@@ -23,6 +23,14 @@
     font-weight: 300;
     margin: 0 0.5rem;
 
+    &.important {
+      color: var(--red);
+      font-family: "Roag Bold";
+      @include media-query-md {
+        margin-left: 1.5rem;
+      }
+    }
+
     // Adds the fake border to active state items
     &[data-state="active"],
     &[aria-current="page"] {

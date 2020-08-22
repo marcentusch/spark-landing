@@ -18,7 +18,8 @@
     },
     {
       "text": "Preorder",
-      "url": "/preorder/"
+      "url": "/preorder/",
+      "important": "true"
     }
   ]
 }

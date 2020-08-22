@@ -1,33 +1,28 @@
 // First up: config and functions
 @import "config";
-@import "utilities/media-queries";
 
-@import "typography";
 @import "reset";
 
 // Global styles start
-
 body {
   background: var(--white);
   color: var(--black);
   line-height: 1.5;
 }
 
-// Scrollbar styles
-::-webkit-scrollbar {
-  height: 1rem;
+@mixin media-query-md {
+  @media screen and (min-width: 37rem) {
+    @content;
+  }
 }
 
-::-webkit-scrollbar-track {
-  background-color: transparent;
-  border: 1px solid var(--grey);
-  border-radius: 0.25rem;
+@mixin media-query-lg {
+  @media screen and (min-width: 62rem) {
+    @content;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: var(--black);
-  border-radius: 0.25rem;
-}
+@import "typography";
 
 // Import blocks
 @import "blocks/site-head";
