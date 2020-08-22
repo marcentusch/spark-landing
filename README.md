@@ -6,7 +6,7 @@ Landing page for fictional company Spark
 
 - [x] Lightweight / minimal JS
 - [x] minify css, html and images
-- [x](did not have time for inline JS) Inline everything for better perfomance
+- [x] (did not have time for inline JS) Inline everything for better perfomance
 - [x] Animated SVG's
 - [ ] Page transitions with Barba.js
 - [x] Animations with GSAP
@@ -15,7 +15,7 @@ Landing page for fictional company Spark
 - [x] Semantic HTML for accesibility
 - [x] Disable animations for sensitive users
 
-[Lighthouse scores](/lighthouse.png)
+![Lighthouse scores](/lighthouse.png)
 
 ### My thoughts and decisions
 
