@@ -38,7 +38,7 @@
         background: red;
         color: var(--white);
         border-radius: 40px;
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 2.5rem;
         font-family: "Roag Bold";
         font-size: 1.5rem;
         text-decoration: none;
@@ -131,4 +131,18 @@
   @include media-query-lg {
     display: block;
   }
+}
+
+// To avoid the blinking of images on page load we set them to transparent. JS will take care of setting opacity back
+#arrow1,
+#arrow2,
+#light1,
+#heatL1,
+#heatL2,
+#heatL3,
+#heatR1,
+#heatR2,
+#heatR3,
+#intro {
+  opacity: 0;
 }

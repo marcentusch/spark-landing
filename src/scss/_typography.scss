@@ -1,18 +1,21 @@
 @font-face {
   font-family: "Roag Light";
   src: url("fonts/Roag-Light.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Roag Bold";
   font-weight: bold;
   src: url("fonts/Roag-Bold.otf") format("opentype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Roag Extra Bold Italic";
   font-weight: 900;
   src: url("fonts/Roag-ExtraBoldItalic.otf") format("opentype");
+  font-display: swap;
 }
 
 h1,

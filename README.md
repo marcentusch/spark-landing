@@ -4,18 +4,18 @@ Landing page for fictional company Spark
 
 ### Features
 
-- [ ] Lightweight / minimal JS
-- [ ] minify css, html and images
-- [ ] Inline everything for better perfomance
-- [ ] Animated SVG's
+- [x] Lightweight / minimal JS
+- [x] minify css, html and images
+- [x](did not have time for inline JS) Inline everything for better perfomance
+- [x] Animated SVG's
 - [ ] Page transitions with Barba.js
-- [ ] Animations with GSAP
-- [ ] Eleventy for SSG
+- [x] Animations with GSAP
+- [x] Eleventy for SSG
 - [ ] Perfect lighthouse scores
-- [ ] Semantic HTML for accesibility
-- [ ] Disable animations for sensitive users
+- [x] Semantic HTML for accesibility
+- [x] Disable animations for sensitive users
 
-### Decisions
+### My thoughts and decisions
 
 I use no SPA frameworks like React or Vue since they make no sense for such a simple site with no state and only a single page.
 
@@ -29,10 +29,10 @@ I use GSAP for animations for improved browser support, perfomance and ease of d
 
 Ended up aligning the main bike image along the normal content instead of letting it flow to the end of the screen. In larger screen sizes it does not look so nice sitting all the way at the right side since it will be further away from rest of the content
 
+I replaced the doodle svg's with simpler versions that used stroke instead of fill so that i could animate the stroke on pageLoad. Could be optimised so they look more similar to the originals but would take more work.
+
 ### Ideas
 
-Logo onLoad animation with a bike that reveals the logo with lightning particle effects coming out of the exhaust
+Battery particle effects
 
 Big picture or maybe just red svg's 3D transforms to follow mouse around on page. Needs to be subtle
-
-Drawing red SVG's in on load
