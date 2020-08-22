@@ -132,12 +132,20 @@
 
   &__images {
     display: flex;
-    max-width: 60%;
+    max-width: 90%;
     justify-content: space-between;
 
     & > img {
       max-width: 100%;
-      max-height: 32px;
+      max-height: 16px;
+
+      @include media-query-md() {
+        max-height: 32px;
+      }
+    }
+
+    @include media-query-lg() {
+      max-width: 60%;
     }
   }
 }
@@ -175,6 +183,10 @@
 #heatL3,
 #heatR1,
 #heatR2,
-#heatR3 {
+#heatR3,
+.intro__main,
+.intro__sub1,
+.intro__sub2,
+.cta {
   opacity: 0;
 }

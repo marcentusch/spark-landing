@@ -10,11 +10,11 @@ Landing page for fictional company Spark
 - [x] minify css, html and images on build
 - [x] (did not have time for inline JS) Inline everything for better perfomance
 - [x] Animated SVG's
-- [ ] Page transitions with Barba.js
 - [x] Animations with GSAP
 - [x] Eleventy for SSG
 - [x] Semantic HTML for accesibility
 - [x] Disable animations for sensitive users
+- [x] Responsive for all screen sizes
 
 ![Lighthouse scores](/lighthouse.png)
 SEO score is lower because Netlify sites without a domain will block site crawlers.
@@ -29,7 +29,7 @@ I use Eleventy for static site generation since it comes with some nice features
 
 Sass for styling because sass is always great. All styling is injected into the html so there is one less request for the user to load.
 
-I use Gulp for task runner since it is simple to setup minifications and webpack would be overkill since there will be minial javascript on client end.
+I use Gulp for task runner since it is simple to setup minifications and webpack would be overkill since there will be minial amount of javascript on client end.
 
 I use GSAP for animations for improved browser support, perfomance and ease of development.
 
@@ -41,8 +41,13 @@ I replaced the doodle svg's with simpler versions that used stroke instead of fi
 
 Some text that was supposed to be regular weight is light instead since i only had light and bold fonts.
 
-### Ideas
+Mobile view looks somewhat weird because I had some issues with text visibility since the main image has both light and dark elements
 
-Battery particle effects
+All of the main-content fades in on load, including SVG's which has animated strokes. Might be a bit too busy. I have tried to make it more smooth with staggering animations.
 
-Big picture or maybe just red svg's 3D transforms to follow mouse around on page. Needs to be subtle
+### Build
+
+Run `npm install`
+
+Run `npm start` to run dev build with watch
+Run `npm run production` for production build

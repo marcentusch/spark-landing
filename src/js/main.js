@@ -10,10 +10,46 @@ function init() {
   bikeTweens();
   introTweens();
   companiesTweens();
+}
 
-  // Exited arrow animation on CTA hover
-  const ctaButton = document.querySelector(".cta__button");
+// Wait until page is loaded
+window.addEventListener("load", () => {
+  init();
+});
+
+// Drawing the arrowSvg
+function arrowTweens() {
+  const arrow1 = document.querySelector("#arrow1");
   const arrowHead = document.querySelector("#arrow2");
+  const ctaButton = document.querySelector(".cta__button");
+
+  arrowTl.fromTo(
+    arrow1,
+    1.2,
+    {
+      drawSVG: "0%",
+      autoAlpha: 1,
+    },
+    {
+      drawSVG: "100%",
+      delay: 0.9,
+      ease: Power1.easeIn,
+    }
+  );
+
+  arrowTl.fromTo(
+    arrowHead,
+    0.8,
+    {
+      drawSVG: "0%",
+      autoAlpha: 1,
+    },
+    {
+      drawSVG: "100%",
+      ease: Power1.easeOut,
+      delay: -0.2,
+    }
+  );
 
   ctaButton.addEventListener("mouseenter", (e) => {
     gsap.set(arrowHead, { transformOrigin: "left" });
@@ -33,43 +69,7 @@ function init() {
   });
 }
 
-// Wait until page is loaded
-window.addEventListener("load", () => {
-  init();
-});
-
-function arrowTweens() {
-  const arrow1 = document.querySelector("#arrow1");
-  const arrow2 = document.querySelector("#arrow2");
-  arrowTl.fromTo(
-    arrow1,
-    1.2,
-    {
-      drawSVG: "0%",
-      autoAlpha: 1,
-    },
-    {
-      drawSVG: "100%",
-      delay: 0.9,
-      ease: Power1.easeIn,
-    }
-  );
-
-  arrowTl.fromTo(
-    arrow2,
-    0.8,
-    {
-      drawSVG: "0%",
-      autoAlpha: 1,
-    },
-    {
-      drawSVG: "100%",
-      ease: Power1.easeOut,
-      delay: -0.2,
-    }
-  );
-}
-
+// Simple staggered load in of elements
 function introTweens() {
   const introElements = [
     ".intro__main",
@@ -95,12 +95,14 @@ function introTweens() {
   );
 }
 
+// Here we draw the svg's strokes in and fade the background image in
 function bikeTweens() {
   const light = document.querySelector("#light1");
 
   const hero = document.querySelector(".hero");
   const heatLeftIds = ["#heatL1", "#heatL2", "#heatL3"];
   const heatRightIds = ["#heatR1", "#heatR2", "#heatR3"];
+  const heatIds = [...heatRightIds, ...heatLeftIds];
 
   bikeDoodlesTl.fromTo(
     hero,
@@ -142,8 +144,24 @@ function bikeTweens() {
     { drawSVG: "0%", autoAlpha: 1 },
     { duration: 0.8, drawSVG: "100%", stagger: 0.3, delay: -0.8 }
   );
+
+  hero.addEventListener("mouseenter", (e) => {
+    const heatTl = gsap.timeline();
+    heatTl.to(heatIds, {
+      drawSVG: "50% 50%",
+      yoyo: true,
+      repeat: 1,
+      duration: 0.4,
+      ease: Power3.easeInOut,
+      stagger: 0.1,
+    });
+    heatTl.to(heatIds, {
+      drawSVG: "100%",
+    });
+  });
 }
 
+// Simple staggered fadeIn animation
 function companiesTweens() {
   const companies = document.querySelectorAll(
     ".companies__image, .companies__text"
