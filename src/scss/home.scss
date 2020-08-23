@@ -25,17 +25,15 @@
   flex-direction: column;
   justify-content: center;
 
+  // For deciding who gets onHover priviligies when things overlap
+  pointer-events: none;
+
   &__sub {
     & p {
       font-size: 1.2rem;
       margin: 2rem 0;
-      color: white;
-      font-family: "Roag Bold";
-
-      @include media-query-md() {
-        color: black;
-        font-family: "Roag Light";
-      }
+      color: black;
+      font-family: "Roag Light";
     }
 
     & .cta {
@@ -52,6 +50,7 @@
         text-transform: uppercase;
         transition: all 0.2s;
         box-shadow: 0 0.5rem 1rem rgba(var(--black), 0.2);
+        pointer-events: initial;
 
         &:hover {
           box-shadow: 0 1rem 2rem rgba(var(--black), 0.2);
@@ -82,11 +81,7 @@
   & h1 {
     text-transform: uppercase;
     margin: 2rem 0;
-    color: var(--red);
-
-    @include media-query-md() {
-      color: var(--black);
-    }
+    color: var(--black);
   }
 
   @include media-query-md {

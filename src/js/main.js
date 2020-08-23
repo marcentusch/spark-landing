@@ -104,6 +104,9 @@ function bikeTweens() {
   const heatRightIds = ["#heatR1", "#heatR2", "#heatR3"];
   const heatIds = [...heatRightIds, ...heatLeftIds];
 
+  const isMobile = window.innerWidth < 590;
+  console.log(isMobile);
+
   bikeDoodlesTl.fromTo(
     hero,
     {
@@ -114,7 +117,7 @@ function bikeTweens() {
       duration: 0.9,
       delay: 0.8,
       ease: Power3.easeInOut,
-      autoAlpha: 1,
+      autoAlpha: isMobile ? 0.3 : 1,
       x: 0,
     }
   );
