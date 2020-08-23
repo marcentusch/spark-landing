@@ -17,6 +17,7 @@ module.exports = (config) => {
   config.addPassthroughCopy({ "src/fonts/": "fonts/" });
   config.addPassthroughCopy({ "src/js/thirdparty/": "js/thirdparty/" });
   config.addPassthroughCopy({ "src/js/": "js/" });
+  config.addPassthroughCopy({ "/service-worker.js": "/" });
 
   return {
     // Setting the template engine to nunjucks. Now .html files can use nunjucks

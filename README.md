@@ -15,6 +15,7 @@ Landing page for fictional company Spark
 - [x] Semantic HTML for accesibility
 - [x] Disable animations for sensitive users
 - [x] Responsive for all screen sizes
+- [x] Service worker
 
 #### Lighthouse scores
 
@@ -34,7 +35,9 @@ Sass for styling because sass is always great. All styling is injected into the 
 
 I use Gulp for task runner since it is simple to setup minifications and WebPack would be overkill since there will be a minimal amount of javascript on the client end.
 
-clean-css, imagemin and html-minifier for minification of assets
+clean-css, imagemin and html-minifier for minification of assets.
+
+Service Workers for caching content and improving perfomance.
 
 #### Design
 
